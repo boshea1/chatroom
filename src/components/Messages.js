@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 
 
 
-const Messages = () => {
+const Messages = ({spanelem}) => {
   const [messages, setMessages]= useState([])
   const [user, loading] = useAuthState(auth)
 
@@ -36,14 +36,14 @@ const Messages = () => {
   return (
     <>
 <div className='m-4'>
-  <h1 className='mb-20 text-3xl'>Chat App</h1>
+  <h1 className='mb-20 text-5xl text-center'>Chat App</h1>
 
-    <div className=''>
+    <div className='overflow-y-scroll h-[400px]'>
     {messages.map((item)=>
     
         <p className={`${item.displayName===user.displayName ? 'text-left':'text-right'}text-black ml-4`}>{item.message}</p>
         )}
-        
+        {spanelem}
         </div>
     </div>
     </>

@@ -23,7 +23,7 @@ const Input = ({sendMessage}) => {
   return (
     <>
     <div className='bottom-0'>
-      <input className='border-2 text-center w-[85%] border-solid pl-3 border-gray-900 ml-3 mt-4 h-9'
+      <input className='border-2 text-center w-[90vw] sm:w-[90vw] border-solid pl-3 border-gray-900 ml-3 mt-4 h-9'
     type='text' placeholder='Write Here' value={input.message} onChange={(e)=>{setInput({createdAt: serverTimestamp()  ,message:e.target.value, user: user.displayName})}}/>
     <button className='mb-5 ml-3 border-2 p-1'
      onClick={()=>{handleClick();

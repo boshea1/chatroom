@@ -28,25 +28,28 @@ const Conversation = () => {
        const sendMessage = async (event) => {
       scroll.current.scrollIntoView({ behavior: "smooth" });
     };
+
+    const p = <span ref={scroll}></span>
+
     if (loading) {
-      return (
-        <div>
-          <p>Initialising User...</p>
-        </div>
-      );
-    }
+    return (
+      <div>
+        <p>Initialising User...</p>
+      </div>
+    );
+  }
     
     if (user){
       
       return (
         
-        <div className=' h-[600px] flex flex-col justify-between'>
+        <div className=' h-[97vh] flex flex-col justify-between'>
     
       {user && <button
-       className='border-black border-2 border-solid w-20 justify-center m-auto mt-2'
+       className='border-black border-2 border-solid w-20 justify-center ml-[90%] mt-2'
        onClick={signout}>Sign Out</button>}
-      <Messages/>
-      <span ref={scroll} className={'border-2 border-black border-solid w-[100%]'}></span>
+      <Messages spanelem={p}/>
+      {/* <span ref={scroll} className={'border-2 border-black border-solid w-[100%]'}></span> */}
      
       <div>
       <Input sendMessage={sendMessage}/>

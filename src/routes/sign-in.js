@@ -29,6 +29,7 @@ const SignIn = () => {
 
   return (
     <div className="shadow-xl mt-32 p-10 text-gray-700 rounded-lg">
+      <h2 className="text-6xl font-medium mb-3 text-center">Chat App</h2>
     <h2 className="text-3xl font-medium">Join today</h2>
     <div className="py-4">
       <h3 className="py-4">Sign in</h3>
